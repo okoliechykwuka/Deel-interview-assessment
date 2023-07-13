@@ -1,7 +1,7 @@
 # Deel-interview-assessment
 
 
-Certainly! Here's a brief discussion of the solution and its possible limitations for tasks 1 and 2:
+**For tasks 1 and 2, please include a brief discussion of the solution and its possible limitations  in ReadMe.**
 
 **Task 1: Matching Transactions by Name**
 
@@ -29,4 +29,56 @@ Limitations:
 - Depending on the complexity of the language model and the number of transactions, memory usage may become a limitation.
 - The solution assumes that a pre-trained language model is available and suitable for the task. Fine-tuning or using a domain-specific model might be necessary to achieve better results depending on the specific use case.
 
-These limitations should be considered when applying the solution in real-world scenarios and further improvements could be explored based on specific requirements and constraints.
+
+
+## Instructions to Run the Transaction Matching API
+
+### Prerequisites
+
+- Python 3.x installed on your system.
+
+- clone the repo and cd into the repo directory
+- Install the required packages by running the following command:
+```
+pip install -r requirements.txt
+```
+
+### Step 2: Prepare the Data
+
+- Prepare the transaction data: Create a CSV file named `transactions.csv` containing the transaction data. The CSV file should have the following columns: `id`, `amount`, and `description`.
+  
+### Step 3: Start the API
+
+- Open a jupyter notebook terminal.
+
+```
+Run the entire code by clicking on the cell/Run all option
+```
+
+### Step 4: Test the API
+
+- Once the API server is running, you can test the endpoints using a tool like FastAPI or Postman.
+
+- For Task 1: Matching Transactions by Name, send a POST request to `http://127.0.0.1:8000/docs#/default/match_transactions_match_transactions_post` with the following JSON payload:
+```json
+{
+  "name": "John Doe"
+}
+```
+Replace `"John Doe"` with the desired name you want to match against transaction descriptions.
+
+- For Task 2: Finding Transactions with Similar Descriptions, send a POST request to `http://127.0.0.1:8000/docs#/default/match_transactions_endpoint_find_similar_transactions_post` with the following JSON payload:
+```json
+{
+  "text": "Payment for groceries"
+}
+```
+Replace `"Payment for groceries"` with the desired text you want to find similar transactions for.
+
+- The API will respond with a JSON object containing the matched or similar transactions, along with other relevant information.
+
+### Step 5: Stop the API
+
+- To stop the API server, click on the Kernel/interrupt option on jupyter notebook.
+
+By following these steps, you should be able to run the Transaction Matching API and test the provided endpoints. 
