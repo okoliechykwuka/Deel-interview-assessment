@@ -97,7 +97,7 @@ Task I
 Task II
 <p align="center"> 
   <kbd>
-    <a href="https://github.com/okoliechykwuka/Deel-interview-assessment/blob/main/" target="_blank"><img src="images.png">
+    <a href="https://github.com/okoliechykwuka/Deel-interview-assessment/blob/main/" target="_blank"><img src="images.jpg">
   </a>
   </kbd>
 </p>
