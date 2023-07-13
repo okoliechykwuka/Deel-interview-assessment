@@ -52,7 +52,7 @@ pip install -r requirements.txt
 - Open a jupyter notebook terminal.
 
 ```
-Run the entire code by clicking on the cell/Run all option
+Run the entire code by clicking on the cell/Run all option on jupyter notebook
 ```
 
 ### Step 4: Test the API
