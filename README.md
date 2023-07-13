@@ -82,11 +82,24 @@ Replace `"Payment for groceries"` with the desired text you want to find similar
 
 - To stop the API server, click on the Kernel/interrupt option on jupyter notebook.
 
-By following these steps, you should be able to run the Transaction Matching API and test the provided endpoints. 
+By following these steps, you should be able to run the Transaction Matching API and test the provided endpoints.
 
+### FastAPI Response images
+
+Task I
 <p align="center"> 
   <kbd>
     <a href="https://github.com/okoliechykwuka/Deel-interview-assessment/blob/main/" target="_blank"><img src="image.png">
   </a>
   </kbd>
 </p>
+
+Task II
+<p align="center"> 
+  <kbd>
+    <a href="https://github.com/okoliechykwuka/Deel-interview-assessment/blob/main/" target="_blank"><img src="images.png">
+  </a>
+  </kbd>
+</p>
+
+
