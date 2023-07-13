@@ -1,76 +1,32 @@
 # Deel-interview-assessment
 
 
-Interview Assessment
-This repository contains my submission for the interview coding assessment at [Company Name].
+Certainly! Here's a brief discussion of the solution and its possible limitations for tasks 1 and 2:
 
-Overview
-The goal of this assessment is to build a simple web application that allows users to:
+**Task 1: Matching Transactions by Name**
 
-View a list of movies
-Search for movies by title
-View details about a movie
-Mark movies as a favorite
-I chose to build this application using:
+Solution:
+- The solution uses fuzzy matching (specifically, token sort ratio) to calculate a match metric between the given name and transaction descriptions.
+- The transactions are then sorted in descending order of the match metric to determine relevance.
+- The API returns the matched transactions and the total number of matches.
 
-React for the frontend
-Node/Express for the backend
-MongoDB for the database
-Running the Application
-Backend
-The backend is a simple Node/Express application. To run:
+Limitations:
+- Fuzzy matching may not always accurately capture the intended match. It relies on string similarity, which can be influenced by factors like typos and variations in spelling or formatting.
+- The token sort ratio used for matching considers the order of tokens. If the order of words in the name and description doesn't match but the words are present, the match metric may not accurately reflect the intended match.
 
-cd backend
-npm install to install dependencies
-npm start to start the server on http://localhost:5000
-Frontend
-The frontend is created with React and makes requests to the backend API. To run:
+**Task 2: Finding Transactions with Similar Descriptions**
 
-cd frontend
-npm install to install dependencies
-npm start to start the dev server on http://localhost:3000
-Backend API
-The backend exposes the following REST API endpoints:
+Solution:
+- The solution utilizes language model embeddings to find transactions with semantically similar descriptions.
+- It employs a pre-trained language model (BERT) and tokenizer to encode the input text and transaction descriptions into embeddings.
+- The cosine similarity between the input embeddings and transaction embeddings is calculated to determine similarity.
+- The transactions are sorted in descending order of similarity score to determine relevance.
+- The API returns similar transactions, embeddings, and the total number of tokens used to create the embeddings.
 
-GET /api/movies
-Get a list of all movies.
+Limitations:
+- The accuracy of finding similar transactions heavily relies on the quality and relevance of the pre-trained language model used.
+- Language model embeddings can be computationally expensive to calculate, especially with large datasets, resulting in slower response times for the API.
+- Depending on the complexity of the language model and the number of transactions, memory usage may become a limitation.
+- The solution assumes that a pre-trained language model is available and suitable for the task. Fine-tuning or using a domain-specific model might be necessary to achieve better results depending on the specific use case.
 
-GET /api/movies/:id
-Get a single movie by id.
-
-POST /api/movies
-Create a new movie. Requires title, releaseYear, and rating in request body.
-
-PUT /api/movies/:id
-Update an existing movie.
-
-DELETE /api/movies/:id
-Delete a movie.
-
-Frontend Features
-The frontend allows users to:
-
-View all movies on the home page
-Search for movies by title on the home page
-Click a movie to view details in a detail page
-Favorite/unfavorite movies on the detail page
-View all favorited movies on the favorites page
-Testing
-To run API tests:
-
-npm test in the backend folder
-
-To run frontend tests:
-
-npm test in the frontend folder
-
-Next Steps
-If I had more time, here are some things I would work on next:
-
-Adding user authentication
-Allowing users to add ratings to movies
-Building out a user profile page
-Implementing pagination on the frontend
-Adding more robust input validation
-Improving test coverage
-Please let me know if you have any other questions! I'm happy to clarify or expand on any part of this project.
+These limitations should be considered when applying the solution in real-world scenarios and further improvements could be explored based on specific requirements and constraints.
